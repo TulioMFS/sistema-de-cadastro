@@ -22,3 +22,10 @@ img{
     border-radius: 50%;
     border: 5px solid gold;
 }
+.center{
+    text-align: center;
+}
+
+h1{
+    color: black;
+}
