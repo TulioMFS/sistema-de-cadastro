@@ -3,15 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-        </ul>
-    </nav>
-</body>
+    <title>Loja Virtual do Moys</title>
+
+    </head>
+
+    <body>
+
+         <div id ="produtos">
+
+        </div>
+        
+        <div id="carrinho">
+
+        </div>
+
+        <script>
+            const items = [
+           {
+            id: 0,
+            nome: 'camiseta',
+            img: 'Cruzeiro.png',
+            quantidade: 0
+           },
+           {
+            id: 1,
+            nome: 'short',
+            img: 'Cruzeiro.png',
+            quantidade: 0
+           },
+           {
+            id: 2,
+            nome: 'sapato',
+            img: 'Cruzeiro.png',
+            quantidade: 0
+           },
+
+        ]   
+
+        inicializarLoja = () => {
+         var containerProdutos = document.getElementById('produtos');
+         items.map((val)=>{
+            console.log(val.nome);
+            containerProdutos.innerHTML+= `
+            
+            <div class="produto-single">
+                <img src="`+val.img+`"/>
+                <p>`+val.nome+`</p>
+                <a key="`+val.id+`" href="">Adicionar ao carrinho!<a/>
+                </div>
+
+            `;
+         })
+        }
+
+        inicializarLoja();
+
+
+
+
+
+        </script>
+
+    </body>
+
 </html>
